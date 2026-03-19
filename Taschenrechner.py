@@ -9,8 +9,10 @@ def rechner():
         return z1 - z2
     elif op == "*":
         return z1 * z2
-    elif op == "/":
-        return z1 / z2
+    try: 
+        if op == "/":
+            return z1 / z2
+    except ZeroDivisionError: print("Man darf nicht durch null teilen.")
     else:
         print("Fehler!")
 
